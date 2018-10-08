@@ -85,7 +85,7 @@ describe('Login action creator', () => {
 
     const testLoginFailure = reason => {
         moxios.wait(() => {
-            const request = moxios.requests.mostRecent();
+            const request = moxios.requests.mostRecent()
             request.respondWith({
                 status: reason.code,
                 response: reason.message

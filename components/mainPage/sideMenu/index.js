@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import OptionsContainer from './optionsContainer'
@@ -29,6 +30,10 @@ const SideMenuComponent = ({open}) =>
             <ToggleBar />
         </Styles.ToggleBar>
     </Styles.MainContainer>
+
+SideMenuComponent.propTypes = {
+    open: PropTypes.bool.isRequired
+}
 
 const SideMenu = connect(
     state => ({

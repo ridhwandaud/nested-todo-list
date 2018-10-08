@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import * as Styles from './styles'
 
@@ -43,6 +44,12 @@ class ContextMenuOverlay extends Component {
             </div>
         ) : (<div></div>)
     }
+}
+
+ContextMenuOverlay.propTypes = {
+    showing: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
+    children: PropTypes.any
 }
 
 export default ContextMenuOverlay

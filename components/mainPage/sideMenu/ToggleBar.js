@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import HoverItem from './optionsContainer/sideMenuOption/HoverItem'
@@ -13,6 +14,11 @@ const ToggleBarComponent = ({open, toggleSideMenu}) => {
     return (
         <HoverItem hover={content(true)} noHover={content(false)} />
     )
+}
+
+ToggleBarComponent.propTypes = {
+    open: PropTypes.bool.isRequired,
+    toggleSideMenu: PropTypes.func.isRequired
 }
 
 const ToggleBar = connect(

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 
@@ -42,6 +43,10 @@ const AddTaskListButtonComponent = ({onClick}) => {
     return (
         <HoverItem hover={activeContent} noHover={idleContent} />
     )
+}
+
+AddTaskListButtonComponent.propTypes = {
+    onClick: PropTypes.func.isRequired
 }
 
 const AddTaskListButton = connect(

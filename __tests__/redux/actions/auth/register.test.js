@@ -35,7 +35,7 @@ describe('Register action creator', () => {
     
     it('Successful register scenario - actions dispatched correctly', () => {
         moxios.wait(() => {
-            const request = moxios.requests.mostRecent();
+            const request = moxios.requests.mostRecent()
             request.respondWith({
                 status: commonResponseCodes.OK.code,
                 response: commonResponseCodes.OK.message
@@ -65,7 +65,7 @@ describe('Register action creator', () => {
 
     it('Failed register scenario - username taken - actions dispatched correctly', () => {
         moxios.wait(() => {
-            const request = moxios.requests.mostRecent();
+            const request = moxios.requests.mostRecent()
             request.respondWith({
                 status: registerResponses.USERNAME_IN_USE.code,
                 response: registerResponses.USERNAME_IN_USE.message
